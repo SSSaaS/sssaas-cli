@@ -1,3 +1,3 @@
-# sssaas-linux
+# sssaas-cli
 
-sssaas-linux
+sssaas-cli
