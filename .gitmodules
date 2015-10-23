@@ -1,0 +1,3 @@
+[submodule "sssaas"]
+	path = sssaas
+	url = https://git.cipherboy.com:8443/SSSAAS/sssaas-golang
