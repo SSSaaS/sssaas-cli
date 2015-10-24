@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./sssaas"
+	"./sss"
 	"fmt"
 	"flag"
 	"strings"
@@ -24,7 +24,7 @@ func main() {
 		if (*minimum > *shares) {
 			flag.Usage()
 		} else {
-			values := sssaas.Create(*minimum, *shares, *secret)
+			values := sss.Create(*minimum, *shares, *secret)
 			fmt.Println("=====Begin Shares=====")
 			for i := range values {
 				fmt.Println(values[i])
@@ -36,7 +36,7 @@ func main() {
 			flag.Usage()
 		} else {
 			secrets := strings.Split(*raw, ",")
-			value := sssaas.Combine(secrets)
+			value := sss.Combine(secrets)
 			fmt.Println("Secret: ", value)
 		}
 	}
