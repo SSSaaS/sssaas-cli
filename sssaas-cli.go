@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/SSSAAS/sssa-golang"
 
-	"fmt"
 	"flag"
+	"fmt"
 	"strings"
 )
 
@@ -18,11 +18,10 @@ func main() {
 
 	flag.Parse()
 
-
-	if (*create == *combine) {
+	if *create == *combine {
 		flag.Usage()
 	} else if *create {
-		if (*minimum > *shares) {
+		if *minimum > *shares {
 			flag.Usage()
 		} else {
 			values := sssa.Create(*minimum, *shares, *secret)
@@ -33,7 +32,7 @@ func main() {
 			fmt.Println("=====End Shares=====")
 		}
 	} else {
-		if (*raw == "") {
+		if *raw == "" {
 			flag.Usage()
 		} else {
 			secrets := strings.Split(*raw, ",")
