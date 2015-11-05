@@ -25,11 +25,9 @@ func main() {
 			flag.Usage()
 		} else {
 			values := sssa.Create(*minimum, *shares, *secret)
-			fmt.Println("=====Begin Shares=====")
 			for i := range values {
 				fmt.Println(values[i])
 			}
-			fmt.Println("=====End Shares=====")
 		}
 	} else {
 		if *raw == "" {
