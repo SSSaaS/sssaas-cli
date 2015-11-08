@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/SSSAAS/sssa-golang"
+	"github.com/SSSaaS/sssa-golang"
 
 	"flag"
 	"fmt"
