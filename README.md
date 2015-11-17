@@ -22,7 +22,7 @@ To combine a secret:
 
 ## Warning
 More options will be added later; this interface may break without warning. If you wish to create shares on the fly, check out the sssa library in the language of your choice:  
-[Go](https://github.com/SSSAAS/sssa-golang), [Ruby](https://github.com/SSSAAS/sssa-ruby), .NET,  Python
+[Go](https://github.com/SSSAAS/sssa-golang), [Ruby](https://github.com/SSSAAS/sssa-ruby), .NET,  [Python](https://github.com/SSSaaS/sssa-python), [JavaScript](https://github.com/SSSaaS/sssa-js)
 
 ## Contributing
 We welcome pull requests, issues, security advice, or other contributions you feel are necessary. Feel free to open an issue to discuss any questions you have about this library.
