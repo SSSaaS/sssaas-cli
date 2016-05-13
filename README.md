@@ -18,7 +18,7 @@ To create a secret:
 
 To combine a secret:  
 
-    sssaas-cli -combine "<share_1>,...,<share_n>"
+    sssaas-cli -combine -secrets "<share_1>,...,<share_n>"
 
 ## Warning
 More options will be added later; this interface may break without warning. If you wish to create shares on the fly, check out the sssa library in the language of your choice:  
