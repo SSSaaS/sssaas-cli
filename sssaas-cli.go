@@ -5,6 +5,7 @@ import (
 
 	"flag"
 	"fmt"
+	"log"
 	"strings"
 )
 
@@ -24,7 +25,10 @@ func main() {
 		if *minimum > *shares {
 			flag.Usage()
 		} else {
-			values := sssa.Create(*minimum, *shares, *secret)
+			values, err := sssa.Create(*minimum, *shares, *secret)
+			if err != nil {
+				log.Println(err)
+			}
 			for i := range values {
 				fmt.Println(values[i])
 			}
@@ -34,7 +38,10 @@ func main() {
 			flag.Usage()
 		} else {
 			secrets := strings.Split(*raw, ",")
-			value := sssa.Combine(secrets)
+			value, err := sssa.Combine(secrets)
+			if err != nil {
+				log.Println(err)
+			}
 			fmt.Println("Secret: ", value)
 		}
 	}
