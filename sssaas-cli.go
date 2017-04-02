@@ -19,9 +19,12 @@ func main() {
 
 	flag.Parse()
 
-	if *create == *combine {
+	switch {
+
+	case *create == *combine:
 		flag.Usage()
-	} else if *create {
+
+	case *create:
 		if *minimum > *shares {
 			flag.Usage()
 		} else {
@@ -33,7 +36,8 @@ func main() {
 				fmt.Println(values[i])
 			}
 		}
-	} else {
+
+	default:
 		if *raw == "" {
 			flag.Usage()
 		} else {
